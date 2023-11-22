@@ -1,6 +1,83 @@
-.container{
-    
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@500;600;700&display=swap');
+
+body{
+    font-family: 'Cormorant Infant', serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+:root{
+    --bg-color:#101820;
+    --font-color:white;  
+    --error:red; 
+}
+.container{    
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    justify-content: center;
+    align-items: center;   
+}  
+h1{
+    font-size: 3rem;
+} 
+p{
+     font: large bold;
+     /* margin: 2rem; */
+}
+#bill-amount ,#cash-given{
+    border-radius: 0.7rem;
+    margin: 1rem;  
+    padding: 1em;
+    border-color: var(--font-color);
+}
+#bill,#cash{
+    font-size: 1.4rem;
+    padding-top: 1rem;
+}
+#btn{
+    font-family: 'Cormorant Infant', serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--bg-color);
+    margin-top:0.8rem ; 
+    border-radius: 0.8rem; 
+    border-color: var(--font-color);
+}
+#error{
+    color:var(--error);
+}
+.table{
+    table-layout: auto;   
+    font-size: larger;    
+    border: 2px solid white;
+    /* position: fixed;
+    bottom: 0; */
+    border-collapse: collapse;
+}
+th,td{
+    height: 30px;
+    border:2px solid var(--font-color);   
+}
+td{
+    width: 50px;
+    text-align: center;
+    
+}
+caption{
+    font-size: 1.7rem;
+    margin-bottom: 0.6rem;
+}
+.ul,.footer-header{
+       display: flex;
+       justify-content: center;      
+       list-style: none;
+       padding-inline-start: 0px;
+}
+.footer-header{
+    /* padding-top: 3rem; */
+    margin-top: 3rem;
+    font-size: 1.6rem;
+}
+.li-items{
+    padding-left: 1.8rem;
+    margin-top: 1rem;
 }

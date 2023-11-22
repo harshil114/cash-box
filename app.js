@@ -9,16 +9,18 @@ btn.addEventListener("click",clickHandler)
 function clickHandler(){
     message.style.display = "none";
     if(billAmount.value>0){
-        if(cashGiven.value >= billAmount.value){
+        if(cashGiven.value > billAmount.value){
             const amountToReturn = cashGiven.value - billAmount.value;
             calculateChange(amountToReturn);
+
         }else if(cashGiven.value === billAmount.value){            
-            errorMessage("No change needed to be return");
+            errorMessage("No money needed to be return");
         }else{
-            errorMessage("Cash must be same as bill or more than it.");
+            errorMessage("Paid money must be same as price or more than it.");
+
         }
     }else{
-        errorMessage("Invalid Bill");    
+        errorMessage("Invalid Price");    
     }   
 };
 
@@ -29,7 +31,6 @@ function calculateChange(amountToReturn){
          noForNotes[i].innerText = numberOfNotes;
     }
 }
-
 function errorMessage(msg){
     message.style.display = "block";
     message.innerText = msg;

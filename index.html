@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash Box</title>   
+    <title>Cash Register Manager</title>   
     <link rel="stylesheet" href="style.css"> 
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    
 </head>
 <body>
     <div class="container">
         <h1>Cash Register Manager</h1>
         <p>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
-        <label for="bill-amount">Bill Amount</label>
+        <label id="bill" for="bill-amount">Price</label>
         <input id="bill-amount" type="text">
-        <label for="cash-given">Cash Given</label>
+        <label id="cash" for="cash-given">Paid Money</label>
         <input id="cash-given" type="text">
         <button id="btn">Check</button>
         <p id="error"></p>
@@ -44,5 +46,22 @@
         </table>
         <script src="app.js"></script>
     </div>
+    <footer>
+       <div class="footer-header">Created by: Harshil Vispute</div>
+        <ul class="ul">
+            <li class="li-items">
+                <a class="link" href="https://github.com/harshil114"><img src="img/github.svg" alt="">                    
+                </a>
+            </li>
+            <li class="li-items">
+                <a class="link" href="https://twitter.com/harshilvispute"><img src="/img/twitter.svg " alt="">                    
+                </a>
+            </li>
+            <li class="li-items">
+                <a class="link" href="https://www.linkedin.com/in/harshil-vispute-06a47a274/"><img src="img/linkedin.svg" alt="">
+                </a>
+            </li>            
+        </ul>
+    </footer>
 </body>
 </html>
