@@ -5,22 +5,24 @@ const message = document.querySelector("#error");
 const noForNotes =document.querySelectorAll(".no-of-notes")
 notes = [500,200,100,50,20,10,5,1]
 
+// console.log(amount,cash,billAmount,cashGiven);
+
 btn.addEventListener("click",clickHandler)
 function clickHandler(){
-    message.style.display = "none";
-    if(billAmount.value>0){
-        if(cashGiven.value > billAmount.value){
-            const amountToReturn = cashGiven.value - billAmount.value;
-            calculateChange(amountToReturn);
-
-        }else if(cashGiven.value === billAmount.value){            
+    const amount = Number(billAmount.value);
+    const cash = Number(cashGiven.value);
+     message.style.display = "none";
+    if(amount > 0){
+        if(cash > amount){
+            const amountToReturn = cash - amount;
+            calculateChange(amountToReturn);   
+        }else if(cash === amount){    
             errorMessage("No money needed to be return");
         }else{
             errorMessage("Paid money must be same as price or more than it.");
-
         }
     }else{
-        errorMessage("Invalid Price");    
+        errorMessage("Invalid Price"); 
     }   
 };
 
